@@ -1,0 +1,531 @@
+@import './fonts.css';
+@import './reset.css';
+@import './common.css';
+
+
+
+/* ------- header ------- */
+header .inner {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+header .group-top {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  margin-top: 30px;
+}
+header .group-top .logo {
+  background: url('../images/logo.png') no-repeat center / 100%;
+  width: 246px;
+  height: 40px;
+}
+header .group-util {
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 30px;
+  font-size: 12px;
+  color: #333;
+}
+header .group-util ul {
+  display: flex;
+  align-items: center;
+}
+header .group-util ul li {
+  position: relative;
+  padding: 0 10px 0 9px;
+}
+header .group-util ul li:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 10px;
+  margin-left: -9px;
+  background: #d6d6d6;
+}
+header .group-util ul li a {
+  font-size: 12px;
+  color: #333;
+  white-space: nowrap;
+}
+header .search-area {
+  width: 340px;
+  height: 40px;
+  margin-left: 90px;
+  border: 2px solid #9bce26;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+header .search-area form,
+header .search-area fieldset {
+  width: 100%;
+  height: 100%;
+}
+header .search-area fieldset {
+  display: flex;
+  align-items: center;
+}
+header .search-area input {
+  height: 100%;
+  flex: 1;
+  padding-left: 14px;
+}
+header .search-area input:focus {
+  outline: none;
+}
+header .search-area .btn-key {
+  width: 40px;
+  height: 38px;
+  background: url('../images/ico-search.svg') center / 20px 20px no-repeat;
+  margin-right: 4px;
+}
+header .btn-area {
+  margin-left: auto;
+}
+header .btn-area ul {
+  display: flex;
+  gap: 31px;
+}
+header .btn-area ul li a {
+  display: flex;
+  position: relative;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  line-height: 20px;
+}
+header .btn-area ul li:not(:last-child) a:before {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -18px;
+  width: 1px;
+  height: 18px;
+  background: #d6d6d6;
+}
+header .btn-area ul li a::after {
+  content: '';
+  display: block;
+  background: url('../images/ico-today.png') no-repeat center / 100%;
+  width: 22px;
+  height: 20px;
+  margin-left: 3px;
+}
+header .btn-area ul li:not(:first-child) a::after {
+  background: url('../images/ico-more.png') no-repeat top / 100%;
+  width: 7px;
+  height: 4px;
+  margin-top: 9px;
+  margin-left: 5px;
+}
+#gnb {
+  background: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 2px solid #555;
+}
+#gnb .inner {
+  display: flex;
+  flex-direction: row;
+}
+#gnb .link-cate {
+  display: flex;
+  align-items: center;
+  width: 170px;
+  position: relative;
+  border-right: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  padding-left: 27px;
+  line-height: 44px;
+  color: #000;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: left;
+}
+#gnb .link-cate::before {
+  content: '';
+  display: inline-block;
+  background: url('../images/ico-menu.png') 0 14px no-repeat;
+  width: 24px;
+  height: 44px;
+  margin: 0 8px 0 0;
+}
+
+
+#gnb .nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+#gnb .nav-item:first-child {
+  margin-left: 50px;
+}
+#gnb .nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+}
+#gnb .nav-item + .nav-item {
+  margin-left: 45px;
+}
+#gnb .nav-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+#gnb .nav-item a span {
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -.04em;
+}
+#gnb .nav-item:hover a span {
+  border-bottom: 2px solid #f27370;
+  color: #f27370;
+}
+
+/* #gnb .nav-item .sub-list {
+  position: absolute;
+  top: 100%;
+  background: rgba(0, 0, 0, .4);
+  width: 100%;
+  height: 450px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+}
+#gnb .nav-item .sub-item {
+  border: 1px solid red;
+  position: relative;
+}
+#gnb .nav-item .sub-list .subitem-list {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #fff;
+  height: 450px;
+  width: 213px;
+  background-color: #fff;
+  border-left: 1px solid #f4f5f7;
+  border-right: 1px solid #f4f5f7;
+  border-bottom: 1px solid #f4f5f7;
+}
+#gnb .nav-item .sub-list .subitem-list {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 170px;
+  height: 450px;
+  background: #fff;
+  border-right: 1px solid #f4f5f7;
+  border-bottom: 1px solid #f4f5f7;
+}
+#gnb .nav-item .sub-list .subitem-item {} */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------- footer ------- */
+#footer {
+  margin-top: 40px;
+  letter-spacing: 0;
+  border-top: 2px solid #aaa;
+}
+#footer .group-top {
+  background: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+}
+#footer .group-top .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+}
+
+
+
+
+#footer .group-top nav .util-list {
+  display: flex;
+}
+#footer .group-top nav .util-list a {
+  display: block;
+  position: relative;
+  padding: 0 20px 0 21px;
+  color: #000;
+  font-size: 12px;
+  line-height: 16px;
+}
+#footer .group-top nav .util-item:first-child a {
+  padding-left: 0;
+}
+#footer .group-top nav .util-item:not(:last-child) a:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 15px;
+  background: #ccc;
+}
+
+
+
+#footer .group-top .select-area {
+  position: relative;
+  width: 235px;
+  height: 30px;
+  border-radius: 0;
+  font-size: 12px;
+}
+#footer .group-top .select-area .btn-select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+  line-height: 30px;
+  border: 1px solid #e5e5e5;
+  background: url('../images/ico-select.png') 95% 50% no-repeat #fff;
+}
+#footer .group-top .select-area .select-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  overflow-y: auto;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  border-left: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  background: #fff;
+}
+#footer .group-top .select-area .select-list.display {
+  display: block;
+}
+#footer .group-top .select-list .select-item + .select-item {
+  margin-top: 10px;
+}
+#footer .group-top .select-list .select-item strong {
+  font-weight: bold;
+}
+#footer .group-top .select-list .select-item .sub-list {
+  padding-left: 10px;
+}
+#footer .group-top .select-list .select-item .sub-item {
+  color: #777;
+  margin: 3px;
+}
+
+
+
+
+#footer .group-center {
+  margin-top: 25px;
+}
+#footer .group-center .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#footer .group-center .logo-area {
+  width: 236px;
+  height: 24px;
+  margin-top: -20px;
+}
+#footer .group-center .logo-area a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#footer .group-center .logo-area img {
+  width: 146px;
+}
+
+
+
+#footer .group-center .info-area {
+  flex: 1;
+}
+#footer .group-center .info-area .info-row-top {
+  display: flex;
+}
+#footer .info-row-top .company-box strong {
+  display: block;
+  margin-bottom: 7px;
+  color: #000;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: bold;
+}
+#footer .info-row-top .company-box address {
+  display: block;
+}
+#footer .info-row-top .company-box address p {
+  color: #777;
+  font-size: 12px;
+  line-height: 20px;
+}
+#footer .info-row-top .company-box address p.addr {
+  margin-left: 29px;
+  text-indent: -29px;
+}
+#footer .info-row-top .company-box address .link {
+  font-size: 12px;
+  display: inline-block;
+  margin-top: 10px;
+  color: #000;
+  border-bottom: 1px solid #333;
+  line-height: 16px;
+}
+
+
+#footer .info-row-top .link-box {
+  margin-left: 70px;
+}
+#footer .info-row-top .link-box a {
+  display: inline-block;
+  color: #777;
+  font-size: 12px;
+  line-height: 20px;
+}
+#footer .info-row-top .link-box a.privacy {
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #333;
+}
+#footer .info-row-top .link-box a span::before {
+  content: "・";
+  margin: 0 4px;
+}
+
+#footer .info-row-top .service-box {
+  margin-left: 70px;
+}
+#footer .info-row-top .service-box strong {
+  color: #000;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: bold;
+}
+#footer .info-row-top .service-box p {
+  margin-top: 7px;
+  color: #777;
+  font-size: 12px;
+  line-height: 20px;
+}
+#footer .info-row-top .service-box .link {
+  display: inline-block;
+  color: #000;
+  font-size: 12px;
+  line-height: 20px;
+  border-bottom: 1px solid #333;
+  margin-top: 10px;
+}
+
+
+#footer .info-row-bottom .notice-box {
+  margin-top: 20px;
+}
+#footer .info-row-bottom .notice-box p {
+  color: #777;
+  font-size: 11px;
+  line-height: 15px;
+}
+
+
+
+#footer .group-bottom1 {
+  text-align: center;
+  width: 1280px;
+  margin: 30px auto 0;
+  border-top: 1px solid #e5e5e5;
+}
+#footer .group-bottom1 p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 11px;
+  line-height: 53px;
+}
+#footer .group-bottom1 p::before {
+  content: '';
+  background: url('../images/ico-notice.png')  no-repeat 0 / 100% auto;
+  width: 24px;
+  height: 17px;
+  margin: -3.5px 6px 0 0;
+}
+#footer .group-bottom1 p span:not(:last-child)::after {
+  content: "|";
+  display: inline-block;
+  margin: 0 3px;
+  color: #777;
+  font-size: 11px;
+}
+
+
+
+
+
+#footer .group-bottom2 {
+  height: 40px;
+  background: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
+}
+#footer .group-bottom2 .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+#footer .group-bottom2 .inner .copy {
+  padding: 11px 0 0;
+  color: #888;
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 700;
+  height: 100%;
+}
+#footer .group-bottom2 .col-right {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+#footer .col-right span {
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 4px;
+  color: #aaa;
+  font-size: 12px;
+  padding: 3px 0 0;
+}
+#footer .col-right .sns-list { 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}

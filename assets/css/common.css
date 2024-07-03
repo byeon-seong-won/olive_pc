@@ -1,0 +1,54 @@
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0,0,0,0);
+  overflow: hidden;
+}
+#wrapper {
+  min-width: 1080px;
+}
+.inner {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+#topBtn {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  z-index: 12;
+  opacity: 0;
+  transition: opacity .3s;
+}
+#topBtn button {
+  display: block;
+  width: 55px;
+  height: 55px;
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #666;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: normal;
+  text-align: center;
+}
+#topBtn span {
+  display: block;
+  width: 14px;
+  height: 8px;
+  margin: 0 auto 7px;
+  background: url('../images/top-btn.png') 0 -8px no-repeat;
+}
+#topBtn button:hover {
+  background: #555;
+  color: #fff;
+}
+#topBtn button:hover span {
+  background: url('../images/top-btn.png') 0 0 no-repeat;
+}
+#topBtn.on {
+  opacity: 1;
+}
