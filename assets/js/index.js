@@ -6,6 +6,8 @@
   });
 
 
+  
+
   // 스크롤 시 top 버튼
   let lastScroll = 0;
   $(window).scroll(function(){
@@ -211,158 +213,18 @@ $('.sc-brand .tab-item a').click(function(e) {
 
 
 // 조회 급상승
-
-var searImgSlide = new Swiper('.sc-search .prd-area', {
-  spaceBetween:8,
-  slidesPerView:'auto',
-  effect : "slide",
-  direction: "vertical",
-  allowTouchMove : false,
-  // loop: true,  
-  // autoplay: true,
-  // speed: 300,
-  // autoplay:true,
-  // on: {
-  //   slideChange: function() {
-  //     var Idx = this.realIndex;
-  //     $('.sc-search .txt-list li').eq(Idx).addClass('on').siblings().removeClass('on');
-  //     console.log("Idx" + Idx)
-  //     if(Idx >= 5) {
-  //       seartxtSlide.slideTo(1);
-  //     } else {
-  //       seartxtSlide.slideTo(0);
-  //     }
-  //     $('.sc-search .txt-item a').click(function(e) {
-  //       e.preventDefault();
-  //       var imgidx = $(this).parent('swiper-slide').index();
-  //       var index = $(this).parent('swiper-slide').index();
-  //       if(index == 0) {   
-  //         seartxtSlide.slideTo(Idx);
-  //       }
-  //     })
-  //   }
-  // }
-})
-
-
-// const items = document.querySelectorAll('.txt-items');
-// let currentIndex = 0;
-
-// function listAni() {
-//   items.forEach(item => item.classList.remove('active'));
-
-//   console.log("추가 전" + currentIndex)
-
-//   items[currentIndex].classList.add('active');
-//   currentIndex++;
-//   console.log("추가 후" + currentIndex)
-
-//   if (currentIndex >= 5) {
-//     currentIndex = 0;
-//     searImgSlide.slideNext();
-//   }
-// }
-
-// setInterval(listAni, 2000);
-
-
-
-
-
-
-
-
-// const itemList = document.querySelectorAll('.txt-list');
-
-// let currentIndex = 0;
-// function listAni() {
-//   if (currentIndex < 6) {
-//     searImgSlide.slideTo(0);
-//     $('.txt-item').removeClass('active');
-//     $(`.sc-search .rank${rankFocus}`).addClass('active');
-//   } else if(currentIndex < 11) {
-//     searImgSlide.slideTo(1);
-//     $('.txt-item').removeClass('active');
-//     $(`.sc-ranking .rank${rankFocus}`).addClass('active');
-//   }
-
-
-
-
-//   const items = document.querySelectorAll('.txt-items');
-
-//   itemList.forEach(item => item.classList.remove('active'));
-//   items[currentIndex].classList.add('active');
-//   currentIndex++;
-
-//   console.log("currentIndex" + currentIndex)
-
-// }
-
-// listAni();
-// listANiInter = setInterval(listAni, 1000);
-
-
-
-
-
-
-
-
-
-// function rankAuto(){
-//   rankFocus++;
-//   if(rankFocus == 11){
-//       rankFocus = 1;
-//   }
-//   if(rankFocus < 6){  
-//       rankSlider.slideTo(0);
-//       $('.ranking-prd a').removeClass('active');
-//       $(`.sc-ranking .rank${rankFocus}`).addClass('active');
-//   }else if(rankFocus < 11){  
-//       rankSlider.slideTo(1);
-//       $('.ranking-prd a').removeClass('active');
-//       $(`.sc-ranking .rank${rankFocus}`).addClass('active');
-//   }
-// }
-
-// interval = setInterval(rankAuto, 3000);
-
-
-// $('.sc-ranking .rank-item').click(function(a){
-//   a.preventDefault();
-//   rankFocus = Number($(this).attr('href').charAt(1)*10) + Number($(this).attr('href').charAt(2))
-//   i = rankFocus ;
-
-  
-//   $('.ranking-prd a').removeClass('active');
-//   $(`.sc-ranking .rank${rankFocus}`).addClass('active');
-//   clearInterval(interval);
-//   interval = setInterval(rankAuto, 3000);
-
+// var searImgSlide = new Swiper('.sc-search .prd-area', {
+//   spaceBetween:8,
+//   slidesPerView:'auto',
+//   effect : "slide",
+//   direction: "vertical",
+//   allowTouchMove : false,
 // })
-
-
-
-
-
 
 $('.txt-item').click(function(e) {
   e.preventDefault();
   clearInterval(listANiInter);
 });
-
-// $('.txt-item').off('mouseenter').hover(function(e) {
-//     $('.txt-item').click(function(e) {
-//       e.preventDefault();
-//       var Ind = $(this).parent('li').index();
-//       clearInterval(listANiInter);
-//     },)
-//      else {
-//       listANiInter = setInterval(listAni, 1000);
-//     }
-//   });
-
 
 
 

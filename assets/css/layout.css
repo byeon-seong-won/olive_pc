@@ -4,6 +4,8 @@
 
 
 
+
+
 /* ------- header ------- */
 header .inner {
   display: flex;
@@ -194,51 +196,6 @@ header .btn-area ul li:not(:first-child) a::after {
   color: #f27370;
 }
 
-/* #gnb .nav-item .sub-list {
-  position: absolute;
-  top: 100%;
-  background: rgba(0, 0, 0, .4);
-  width: 100%;
-  height: 450px;
-  font-size: 14px;
-  color: #fff;
-  font-weight: 700;
-}
-#gnb .nav-item .sub-item {
-  border: 1px solid red;
-  position: relative;
-}
-#gnb .nav-item .sub-list .subitem-list {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  background: #fff;
-  height: 450px;
-  width: 213px;
-  background-color: #fff;
-  border-left: 1px solid #f4f5f7;
-  border-right: 1px solid #f4f5f7;
-  border-bottom: 1px solid #f4f5f7;
-}
-#gnb .nav-item .sub-list .subitem-list {
-  display: none;
-  position: absolute;
-  top: 0;
-  width: 170px;
-  height: 450px;
-  background: #fff;
-  border-right: 1px solid #f4f5f7;
-  border-bottom: 1px solid #f4f5f7;
-}
-#gnb .nav-item .sub-list .subitem-item {} */
-
-
-
-
-
-
-
-
 
 
 
@@ -259,10 +216,6 @@ header .btn-area ul li:not(:first-child) a::after {
   justify-content: space-between;
   height: 52px;
 }
-
-
-
-
 #footer .group-top nav .util-list {
   display: flex;
 }
@@ -287,8 +240,6 @@ header .btn-area ul li:not(:first-child) a::after {
   height: 15px;
   background: #ccc;
 }
-
-
 
 #footer .group-top .select-area {
   position: relative;
@@ -340,8 +291,6 @@ header .btn-area ul li:not(:first-child) a::after {
 }
 
 
-
-
 #footer .group-center {
   margin-top: 25px;
 }
@@ -364,7 +313,6 @@ header .btn-area ul li:not(:first-child) a::after {
 #footer .group-center .logo-area img {
   width: 146px;
 }
-
 
 
 #footer .group-center .info-area {
@@ -401,7 +349,6 @@ header .btn-area ul li:not(:first-child) a::after {
   border-bottom: 1px solid #333;
   line-height: 16px;
 }
-
 
 #footer .info-row-top .link-box {
   margin-left: 70px;
@@ -446,7 +393,6 @@ header .btn-area ul li:not(:first-child) a::after {
   margin-top: 10px;
 }
 
-
 #footer .info-row-bottom .notice-box {
   margin-top: 20px;
 }
@@ -455,8 +401,6 @@ header .btn-area ul li:not(:first-child) a::after {
   font-size: 11px;
   line-height: 15px;
 }
-
-
 
 #footer .group-bottom1 {
   text-align: center;
@@ -486,10 +430,6 @@ header .btn-area ul li:not(:first-child) a::after {
   color: #777;
   font-size: 11px;
 }
-
-
-
-
 
 #footer .group-bottom2 {
   height: 40px;

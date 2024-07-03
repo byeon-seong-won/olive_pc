@@ -52,7 +52,7 @@ function getpopData(idx) {
   });
 }
 
-$('.pop').click(function() {
+$('.pop-more').click(function() {
   pop_index = pop_index + 2;
   pop_page_idx++;
 
@@ -123,7 +123,7 @@ function getcusData(idx) {
   });
 }
 
-$('.custo').click(function() {
+$('.custo-more').click(function() {
   cus_index = cus_index + 2;
   cus_page_idx++;
 
