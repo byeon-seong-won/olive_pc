@@ -12,148 +12,36 @@
 
 
 /* 리스트 공통 */
-.prd-list {
-  display: flex;
-  position: relative;
-  z-index: 10;
-}
-.prd-item {
-  width: 215px;
-  text-align: center;
-}
-.prd-item .thumb-wrap {
-  width: 215px;
-  height: 215px;
-}
-.prd-item .thumb-wrap img {
-  width: 100%;
-}
-.prd-item .info-wrap {
-  margin-top: 15px;
-  margin-left: 20px;
-  text-align: left;
-}
-.prd-item .info-wrap .title {
-  height: 20px;
-  line-height: 20px;
-  color: #777;
-  font-weight: 700;
-}
-.prd-item .info-wrap .subtitle {
-  margin-top: 5px;
-  overflow: hidden;
-  height: 40px;
-  padding: 2px 0;
-  -webkit-box-orient: vertical;
-  line-height: 18px;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  word-break: keep-all;
-  color: #000;
-  font-size: 14px;
-}
-.prd-item .info-wrap .price-info {
-  line-height: 22px;
-  text-align: left;
-}
-.prd-item .info-wrap .price-info .del {
-  color: #777;
-  font-size: 12px;
-  font-weight: 700;
-}
-.prd-item .info-wrap .price-info .price {
-  margin-left: 7px;
-  color: #e02020;
-  font-size: 14px;
-  font-weight: 700;
-}
-.prd-item .info-wrap .price-info .price span {
-  font-size: 20px;
-  letter-spacing: -.02em;
-  font-weight: 500;
-}
-.prd-item .info-wrap .price-info .del span {
-  font-size: 14px;
-  text-decoration: line-through;
-  letter-spacing: -.02em;
-  font-weight: 500;
-}
-.prd-item .info-wrap .sale-box {
-  display: flex;
-  justify-content: center;
-  margin-top: 5px;
-}
-.prd-item .info-wrap .sale-box li {
-  font-size: 12px;
-  text-align: center;
-  color: #fff;
-  width: auto;
-  height: 18px;
-  padding: 0 10px;
-  border-radius: 9px;
-  line-height: 17px;
-}
-.prd-item .info-wrap .sale-box li.coupon {
-  background-color: #9bce26;
-}
-.prd-item .info-wrap .sale-box li.sale {
-  background-color: #f65c60;
-}
-.prd-item .info-wrap .sale-box li.gift {
-  background-color: #6fcff7;
-}
-.prd-item .info-wrap .sale-box li.today {
-  background-color: #f374b7;
-}
-
-
+.prd-list {display: flex;position: relative;z-index: 10;}
+.prd-item {width: 215px;text-align: center;}
+.prd-item .thumb-wrap {width: 215px;height: 215px;}
+.prd-item .thumb-wrap img {width: 100%;}
+.prd-item .info-wrap {margin-top: 15px;margin-left: 20px;text-align: left;}
+.prd-item .info-wrap .title {height: 20px;line-height: 20px;color: #777;font-weight: 700;}
+.prd-item .info-wrap .subtitle {margin-top: 5px;overflow: hidden;height: 40px;padding: 2px 0;-webkit-box-orient: vertical;line-height: 18px;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 2;word-break: keep-all;color: #000;font-size: 14px;}
+.prd-item .info-wrap .price-info {line-height: 22px;text-align: left;}
+.prd-item .info-wrap .price-info .del {color: #777;font-size: 12px;font-weight: 700;}
+.prd-item .info-wrap .price-info .price {margin-left: 7px;color: #e02020;font-size: 14px;font-weight: 700;}
+.prd-item .info-wrap .price-info .price span {font-size: 20px;letter-spacing: -.02em;font-weight: 500;}
+.prd-item .info-wrap .price-info .del span {font-size: 14px;text-decoration: line-through;letter-spacing: -.02em;font-weight: 500;}
+.prd-item .info-wrap .sale-box {display: flex;justify-content: center;margin-top: 5px;}
+.prd-item .info-wrap .sale-box li {font-size: 12px;text-align: center;color: #fff;width: auto;height: 18px;padding: 0 10px;border-radius: 9px;line-height: 17px;}
+.prd-item .info-wrap .sale-box li.coupon {background-color: #9bce26;}
+.prd-item .info-wrap .sale-box li.sale {background-color: #f65c60;}
+.prd-item .info-wrap .sale-box li.gift {background-color: #6fcff7;}
+.prd-item .info-wrap .sale-box li.today {background-color: #f374b7;}
 
 
 /* 리스트 row 공통 */
-.prd-list.type-row .prd-item {
-  flex: 1;
-}
-.prd-list.type-row .prd-item a {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-.prd-list.type-row .prd-item .thumb-wrap {
-  width: 175px;
-  height: 175px;
-}
-.prd-list.type-row .prd-item .thumb-wrap img {
-  width: 100%;
-  height: 100%;
-}
-.prd-list.type-row .prd-item .info-wrap {
-  flex: 1;
-  text-align: left;
-  margin-top: 0;
-}
-.prd-list.type-row .prd-item .info-wrap .subtitle {
-  text-align: left;
-}
-.prd-list.type-row .prd-item .info-wrap .price-info {
-  display: flex;
-  flex-direction: column;
-}
-.prd-list.type-row .prd-item .info-wrap .price {
-  margin-left: 0;
-  margin-top: 7px;
-}
-.prd-list.type-row .prd-item .info-wrap .sale-box {
-  justify-content: start;
-}
-
-
-
-
-
-
-
-
+.prd-list.type-row .prd-item {flex: 1;}
+.prd-list.type-row .prd-item a {display: flex;align-items: center;gap: 20px;}
+.prd-list.type-row .prd-item .thumb-wrap {width: 175px;height: 175px;}
+.prd-list.type-row .prd-item .thumb-wrap img {width: 100%;height: 100%;}
+.prd-list.type-row .prd-item .info-wrap {flex: 1;text-align: left;margin-top: 0;}
+.prd-list.type-row .prd-item .info-wrap .subtitle {text-align: left;}
+.prd-list.type-row .prd-item .info-wrap .price-info {display: flex;flex-direction: column;}
+.prd-list.type-row .prd-item .info-wrap .price {margin-left: 0;margin-top: 7px;}
+.prd-list.type-row .prd-item .info-wrap .sale-box {justify-content: start;}
 
 
 
