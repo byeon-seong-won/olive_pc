@@ -17,30 +17,29 @@ function getpopData(idx) {
       const newData = [];
 
       newData.push(...data.slice(idx, idx + 2));
-
       pophtmlEl=``;
       newData.forEach( popEl => {
         pophtmlEl+= 
           `
             <li class="prd-item">
-              <a href="#">
-                <div class="thumb-wrap">
-                  <img src="https://image.oliveyoung.co.kr/uploads/images/goods/400/${popEl.product.itemImage}" alt="${popEl.product.itemName}">
+              <a href="#" class="link"></a>
+              <div class="thumb-wrap">
+                <img src="https://image.oliveyoung.co.kr/uploads/images/goods/400/${popEl.product.itemImage}" alt="${popEl.product.itemName}">
+              </div>
+              <div class="info-wrap">
+                <p class="subtitle">${popEl.product.itemName}</p>
+                <div class="price-info">
+                  <span class="del"><span>17,000</span>원</span>
+                  <span class="price"><span>8,910</span>원~</span>
+                  <button></button>
                 </div>
-                <div class="info-wrap">
-                  <p class="subtitle">${popEl.product.itemName}</p>
-                  <div class="price-info">
-                    <span class="del"><span>17,000</span>원</span>
-                    <span class="price"><span>8,910</span>원~</span>
-                  </div>
-                  <ul class="sale-box">
-                    <li class="sale">세일</li>
-                    <li class="coupon">쿠폰</li>
-                    <li class="gift">증정</li>
-                    <li class="today">오늘드림</li>
-                  </ul>
-                </div>
-              </a>
+                <ul class="sale-box">
+                  <li class="sale">세일</li>
+                  <li class="coupon">쿠폰</li>
+                  <li class="gift">증정</li>
+                  <li class="today">오늘드림</li>
+                </ul>
+              </div>
             </li>
           `
       });
@@ -94,24 +93,24 @@ function getcusData(idx) {
         cushtmlEl+= 
           `
             <li class="prd-item">
-              <a href="#">
-                <div class="thumb-wrap">
-                  <img src="https://image.oliveyoung.co.kr/uploads/images/goods/400/${cusEl.product.itemImage}" alt="${cusEl.product.itemName}">
+              <a href="#"></a>
+              <div class="thumb-wrap">
+                <img src="https://image.oliveyoung.co.kr/uploads/images/goods/400/${cusEl.product.itemImage}" alt="${cusEl.product.itemName}">
+              </div>
+              <div class="info-wrap">
+                <p class="subtitle">${cusEl.product.itemName}</p>
+                <div class="price-info">
+                  <span class="del"><span>17,000</span>원</span>
+                  <span class="price"><span>8,910</span>원~</span>
+                  <button></button>
                 </div>
-                <div class="info-wrap">
-                  <p class="subtitle">${cusEl.product.itemName}</p>
-                  <div class="price-info">
-                    <span class="del"><span>17,000</span>원</span>
-                    <span class="price"><span>8,910</span>원~</span>
-                  </div>
-                  <ul class="sale-box">
-                    <li class="sale">세일</li>
-                    <li class="coupon">쿠폰</li>
-                    <li class="gift">증정</li>
-                    <li class="today">오늘드림</li>
-                  </ul>
-                </div>
-              </a>
+                <ul class="sale-box">
+                  <li class="sale">세일</li>
+                  <li class="coupon">쿠폰</li>
+                  <li class="gift">증정</li>
+                  <li class="today">오늘드림</li>
+                </ul>
+              </div>
             </li>
           `
       });
