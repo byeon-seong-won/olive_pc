@@ -1199,8 +1199,23 @@
 .sc-search .prd-box {
   display: flex;
   height: 236px;
+  border: 2px solid red;
+  overflow: hidden;
+
 }
-.sc-search .txt-area,
+
+
+.sc-search .prd-box li.active {
+  border: 1px solid #000;
+}
+.sc-search .prd-box li.hidden {
+  display: none;
+}
+
+
+
+
+/* .sc-search .txt-area,
 .sc-search .prd-area {
   flex: 1;
   border-bottom: 1px solid #ddd;
@@ -1217,7 +1232,7 @@
   height: 100%;
   overflow: hidden;
   transition: all 0.3s;
-}
+} */
 
 .sc-search .prd-item .info-wrap .sale-box {
   justify-content: start;
