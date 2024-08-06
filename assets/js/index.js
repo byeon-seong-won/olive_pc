@@ -323,17 +323,17 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 
-  pageItems[0].addEventListener("click", () => {
-      moveToIndex(0);
-  });
+  // pageItems[0].addEventListener("click", () => {
+  //     moveToIndex(0);
+  // });
 
-  pageItems[1].addEventListener("click", () => {
-      moveToIndex(5);
-  });
+  // pageItems[1].addEventListener("click", () => {
+  //     moveToIndex(5);
+  // });
 
-  updateButton.addEventListener("click", () => {
-      moveToIndex(0);
-  });
+  // updateButton.addEventListener("click", () => {
+  //     moveToIndex(0);
+  // });
 
   timer = setTimeout(showNext, interval);
 });
