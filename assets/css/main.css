@@ -1150,8 +1150,8 @@
   position: relative;
 }
 .sc-search .headline {
-  margin-bottom: 8px;
-  height: 40px;
+  padding-bottom: 16px;
+  line-height: 28px;
 }
 .sc-search .pagination {
   display: flex;
@@ -1195,46 +1195,102 @@
   background: #2f3030;
   border-radius: 12px;
 }
-
 .sc-search .prd-box {
   display: flex;
   height: 236px;
-  border: 2px solid red;
   overflow: hidden;
-
-}
-
-
-.sc-search .prd-box li.active {
-  border: 1px solid #000;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
 }
 .sc-search .prd-box li.hidden {
   display: none;
 }
-
-
-
-
-/* .sc-search .txt-area,
-.sc-search .prd-area {
+.sc-search .prd-box > ul {
   flex: 1;
-  border-bottom: 1px solid #ddd;
-  padding: 18px 0;
-  border-top: 1px solid #ddd;
 }
-.sc-search .prd-item {
-  padding: 0 40px 0 20px;
-  flex-direction: row;
+.sc-search .img-area {
+  margin-top: 30px;
+}
+.sc-search .img-area > li {
+  transition: .3s !important;
+  height: 236px;
   position: absolute;
-  top: 0;
+  top: 236px;
   left: 0;
-  width: 510px;
-  height: 100%;
-  overflow: hidden;
-  transition: all 0.3s;
-} */
+}
+.sc-search .prd-list.type-row .prd-item .info-wrap {
+  width: 235px;
+  height: 175px;
+  padding-top: 0;
+  position: relative;
+  display: table;
+  margin-left: 0;
+} 
 
-.sc-search .prd-item .info-wrap .sale-box {
+
+
+
+.sc-search .img-area > li.active {
+  top: 0;
+}
+
+.sc-search .prd-list.type-row .prd-item {
+  width: 100%;
+}
+.sc-search .prd-list.type-row .prd-item .thumb-wrap img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+.sc-search .txt-area {
+  margin: 18px 0;
+  padding-right: 18px;
+}
+.sc-search .txt-area li.active {
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+.sc-search .txt-area li.active a {
+  color: #333;
+}
+.sc-search .txt-area li.active strong {
+  font-weight: 700;
+  color: #333;
+}
+.sc-search .txt-area a {
+  padding: 0 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #777;
+}
+.sc-search .txt-area a strong {
+  display: inline-block;
+  padding-right: 14px;
+  font-size: 18px;
+  color: #999;
+}
+.sc-search .txt-area a span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 90%;
+}
+
+
+
+
+
+
+/* .sc-search .prd-item .info-wrap .sale-box {
   justify-content: start;
 }
 .sc-search .prd-item .info-wrap .price-info .del {
@@ -1348,7 +1404,7 @@
   display: block;
   padding: 10px;
   cursor: pointer;
-}
+} */
 
 
 

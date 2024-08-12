@@ -198,7 +198,6 @@ var brandSlide = new Swiper('.sc-brand .brand-slide', {
     }
   }
 });
-
 $('.sc-brand .tab-item a').click(function(e) {
   e.preventDefault();
   var index = $(this).parent('li').index();
@@ -209,14 +208,9 @@ $('.sc-brand .tab-item a').click(function(e) {
 
 
 
-
-
-
 // 조회 급상승
-
 // for (let index = 0; index < 10; index++) {
 //   setTimeout(() => {
-
 //     if(index == 5) {
 //       $('.prd-box li').removeClass('hidden');
 //       $('.prd-box li').slice(0,5).addClass('hidden');
@@ -224,18 +218,74 @@ $('.sc-brand .tab-item a').click(function(e) {
 //       $('.prd-box li').removeClass('hidden');
 //       $('.prd-box li').slice(6,9).addClass('hidden');
 //     }
-
 //     $('.prd-box li').removeClass('active');
 //       $('.prd-box li').eq(index).addClass('active');
-
-
 //   }, 1000*index)
-  
 // }
+
+
+
+
+
+  // function rankAuto() {
+  //   rankFocus++;
+  //   if(rankFocus == 11){
+  //     rankFocus = 1;
+  //   }
+  //   // rankCurr 값이 바뀌면
+  //   if(rankFocus < 6){  
+  //       rankSlider.slideTo(0);
+  //       $('.ranking-prd a').removeClass('active');
+  //       $(`.sc-ranking .rank${rankFocus}`).addClass('active');
+  //   } else if(rankFocus < 11){  
+  //       rankSlider.slideTo(1);
+  //       $('.ranking-prd a').removeClass('active');
+  //       $(`.sc-ranking .rank${rankFocus}`).addClass('active');
+  //   }
+  // }
+  // interval = setInterval(rankAuto, 3000);
+
+  // // 아이템 클릭시 
+  // $('.sc-ranking .rank-item').click(function(a){
+  //   a.preventDefault();
+  //   rankFocus = Number($(this).attr('href').charAt(1)*10) + Number($(this).attr('href').charAt(2))
+  //   i = rankFocus ;
+
+  //   $('.ranking-prd a').removeClass('active');
+  //   $(`.sc-ranking .rank${rankFocus}`).addClass('active');
+  //   clearInterval(interval);
+  //   interval = setInterval(rankAuto, 3000);
+  // })
+
+  // let rankFocus = 1; //현재 값을 저장하는 변수
+  // $('.sc-ranking .rank1').addClass('active');//첫번째 아이템에 기본 포커스
+  
+  // // 페이징 클릭시 
+  // $('.sc-ranking .swiper-pagination-bullet').click(function(a){
+  //     a.preventDefault();
+  //     i = $(this).index();
+  
+  //     rankSlider.slideTo(i);
+  //     if(i == 0){
+  //       rankFocus = 1;
+  //     }else{
+  //       rankFocus = 6;
+  //     }
+  //     $('.ranking-prd a').removeClass('active');
+  //     $(`.sc-ranking .rank${rankFocus}`).addClass('active');
+    
+  //     clearInterval(interval); //클릭시 인터벌의 타이머 초기화
+  //     interval = setInterval(rankAuto, 3000); // 타이머 다시 시작
+  // })
+
+
+
+
 
 
 document.addEventListener("DOMContentLoaded", () => {
   const txtItems = document.querySelectorAll(".txt-area li");
+  const imgItems = document.querySelectorAll(".img-area li");
   const pageItems = document.querySelectorAll(".page-item");
   const updateButton = document.querySelector(".update");
   const totalItems = txtItems.length;
@@ -243,91 +293,106 @@ document.addEventListener("DOMContentLoaded", () => {
   const interval = 1000; // 1초
   let timer;
 
-  function updatePageIndicator() {
-      if (currentIndex >= 0 && currentIndex < 5) {
-          pageItems[0].classList.add("on");
-          pageItems[1].classList.remove("on");
-      } else if (currentIndex >= 5 && currentIndex < 10) {
-          pageItems[0].classList.remove("on");
-          pageItems[1].classList.add("on");
-      }
-  }
+  // function updatePageIndicator() {
+  //     if (currentIndex >= 0 && currentIndex < 5) {
+  //       pageItems[0].classList.add("on");
+  //       pageItems[1].classList.remove("on");
+  //     } else if (currentIndex >= 5 && currentIndex < 10) {
+  //       pageItems[0].classList.remove("on");
+  //       pageItems[1].classList.add("on");
+  //     }
+  // }
 
   function showNext() {
       // 현재 active 제거
       txtItems[currentIndex].classList.remove("active");
-
+      imgItems[currentIndex].classList.remove("active");
+      
       // 다음 인덱스로 이동
       currentIndex++;
 
       if (currentIndex === 5) {
           // 5번에서 6번으로 넘어가며 6~10번 표시
           for (let i = 0; i < 5; i++) {
-              txtItems[i].classList.add("hidden");
-              txtItems[i + 5].classList.remove("hidden");
+            txtItems[i].classList.add("hidden");
+            txtItems[i + 5].classList.remove("hidden");
+            imgItems[i].classList.add("hidden");
+            imgItems[i + 5].classList.remove("hidden");
           }
       }
 
       if (currentIndex === totalItems) {
           // 마지막 항목에 도달하면 처음으로 돌아가기
           for (let i = 0; i < 5; i++) {
-              txtItems[i].classList.remove("hidden");
-              txtItems[i + 5].classList.add("hidden");
+            txtItems[i].classList.remove("hidden");
+            txtItems[i + 5].classList.add("hidden");
+            imgItems[i].classList.remove("hidden");
+            imgItems[i + 5].classList.add("hidden");
           }
           currentIndex = 0;
       }
 
       // 새 active 추가
       txtItems[currentIndex].classList.add("active");
+      imgItems[currentIndex].classList.add("active");
 
       // 페이지 인디케이터 업데이트
-      updatePageIndicator();
+      // updatePageIndicator();
 
       timer = setTimeout(showNext, interval);
   }
 
-  function moveToIndex(index) {
-      // 현재 active 제거
-      txtItems[currentIndex].classList.remove("active");
 
-      // 클릭된 인덱스로 이동
-      currentIndex = index;
 
-      // 클릭된 인덱스 활성화
-      txtItems[currentIndex].classList.add("active");
 
-      // 6번 이상이면 6~10번 표시
-      if (currentIndex >= 5) {
-          for (let i = 0; i < 5; i++) {
-              txtItems[i].classList.add("hidden");
-              txtItems[i + 5].classList.remove("hidden");
-          }
-      } else {
-          for (let i = 0; i < 5; i++) {
-              txtItems[i].classList.remove("hidden");
-              txtItems[i + 5].classList.add("hidden");
-          }
-      }
 
-      // 페이지 인디케이터 업데이트
-      updatePageIndicator();
+  // function moveToIndex(index) {
+  //     // 현재 active 제거
+  //     txtItems[currentIndex].classList.remove("active");
 
-      // 타이머 재설정
-      clearTimeout(timer);
-      timer = setTimeout(showNext, interval);
-  }
+  //     // 클릭된 인덱스로 이동
+  //     currentIndex = index;
 
-  txtItems.forEach((item, index) => {
-      item.addEventListener("click", () => {
-          moveToIndex(index);
-      });
-  });
+  //     // 클릭된 인덱스 활성화
+  //     txtItems[currentIndex].classList.add("active");
 
-  // pageItems[0].addEventListener("click", () => {
-  //     moveToIndex(0);
+  //     // 6번 이상이면 6~10번 표시
+  //     if (currentIndex >= 5) {
+  //         for (let i = 0; i < 5; i++) {
+  //           txtItems[i].classList.add("hidden");
+  //           txtItems[i + 5].classList.remove("hidden");
+  //         }
+  //     } else {
+  //         for (let i = 0; i < 5; i++) {
+  //           txtItems[i].classList.remove("hidden");
+  //           txtItems[i + 5].classList.add("hidden");
+  //         }
+  //     }
+
+  //     // 페이지 인디케이터 업데이트
+  //     // updatePageIndicator();
+
+  //     // 타이머 재설정
+  //     clearTimeout(timer);
+  //     timer = setTimeout(showNext, interval);
+  // }
+
+  // txtItems.forEach((item, index) => {
+  //     item.addEventListener("click", (e) => {
+  //       e.preventDefault();
+  //       moveToIndex(index);
+  //     });
   // });
 
-  // pageItems[1].addEventListener("click", () => {
+
+  
+  // pageItems[0].addEventListener("click", (e) => {
+  //   e.preventDefault();
+  //   moveToIndex(0);
+  // });
+
+  // pageItems[1].addEventListener("click", (e) => {
+  //   e.preventDefault();
   //     moveToIndex(5);
   // });
 
