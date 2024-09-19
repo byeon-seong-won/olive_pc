@@ -248,17 +248,11 @@ function showNext() {
 
   timer = setTimeout(showNext, interval);
 }
-
+// 첫 번째 항목 active 클래스를 추가 먼저
+txtItems[currentIndex].classList.add("active");
+imgItems[imgindx].classList.add("active");
 
 timer = setTimeout(showNext, interval);
-
-
-
-
-
-
-
-
 
 
 
