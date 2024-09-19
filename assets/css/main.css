@@ -1199,7 +1199,8 @@
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
 }
-.sc-search .prd-box .txt-area li.hidden {
+.sc-search .prd-box .txt-area li.hidden,
+.sc-search .prd-box .img-area > li.hidden {
   display: none;
 }
 .sc-search .prd-box > ul {
