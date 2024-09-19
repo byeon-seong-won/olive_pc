@@ -219,29 +219,20 @@ const imgItems = document.querySelectorAll(".img-area > li");
 let currentIndex = 0;
 let imgindx = 0;
 const totalItems = txtItems.length;
-const interval = 1000; 
+const interval = 4000; 
 
 function showNext() {
-  // 현재 활성화된 텍스트를 비활성화
   txtItems[currentIndex].classList.remove("active");
-  
-  // 현재 활성화된 이미지를 비활성화
   imgItems[imgindx].classList.remove("active");
-
-  // 텍스트 인덱스를 증가
   currentIndex++;
-  // 이미지 인덱스를 증가
   imgindx++;
 
-  // 텍스트 아이템이 5번째일 경우, 다음 5개로 교체
   if (currentIndex === 5) {
     for (let i = 0; i < 5; i++) {
       txtItems[i].classList.add("hidden");
       txtItems[i + 5].classList.remove("hidden");
     }
   }
-  
-  // 마지막 텍스트 아이템에 도달했을 경우, 처음으로 돌아감
   if (currentIndex === totalItems) {
     for (let i = 0; i < 5; i++) {
       txtItems[i].classList.remove("hidden");
@@ -249,61 +240,14 @@ function showNext() {
     }
     currentIndex = 0;
   }
-
-  // 마지막 이미지 아이템에 도달했을 경우, 처음으로 돌아감
   if (imgindx === imgItems.length) {
     imgindx = 0;
   }
-
-  // 현재 인덱스에 해당하는 텍스트와 이미지를 활성화
   txtItems[currentIndex].classList.add("active");
   imgItems[imgindx].classList.add("active");
 
-  // 다음 슬라이드로 이동하는 타이머 설정
   timer = setTimeout(showNext, interval);
 }
-
-
-
-
-
-
-// 클릭시 이동
-// function moveToIndex(index) { 
-
-//   txtItems[currentIndex].classList.remove("active");
-//   imgItems[currentIndex].classList.remove("active");
-
-//   currentIndex = index;
-
-//   txtItems[currentIndex].classList.add("active");
-//   imgItems[currentIndex].classList.add("active");
-
-//   if (currentIndex >= 5) {
-//     for (let i = 0; i < 5; i++) {
-//       txtItems[i].classList.add("hidden");
-//       txtItems[i + 5].classList.remove("hidden");
-//       imgItems[i].classList.add("hidden");
-//       imgItems[i + 5].classList.remove("hidden");
-//     }
-//   } else {
-//     for (let i = 0; i < 5; i++) {
-//       txtItems[i].classList.remove("hidden");
-//       txtItems[i + 5].classList.add("hidden");
-//       imgItems[i].classList.remove("hidden");
-//       imgItems[i + 5].classList.add("hidden");
-//     }
-//   }
-//   clearTimeout(timer);
-//   timer = setTimeout(showNext, interval);
-// }
-
-// txtItems.forEach((item, index) => {
-//   item.addEventListener("click", (e) => {
-//     e.preventDefault();
-//     moveToIndex(index);
-//   });
-// });
 
 
 timer = setTimeout(showNext, interval);
