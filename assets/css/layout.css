@@ -175,6 +175,7 @@ header .btn-area ul li:not(:first-child) a::after {
   justify-content: center;
   align-items: center;
   height: 44px;
+  flex-shrink: 0;
 }
 #gnb .nav-item + .nav-item {
   margin-left: 45px;
